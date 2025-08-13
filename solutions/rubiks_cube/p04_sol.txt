@@ -1,0 +1,5 @@
+(d )
+(frev )
+(l )
+(u )
+; cost = 4 (unit cost)
