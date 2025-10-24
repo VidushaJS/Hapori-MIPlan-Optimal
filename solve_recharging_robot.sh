@@ -5,7 +5,7 @@ DOMAIN_FILE="domains/recharging_robot_domain.pddl"
 PROBLEM_DIR="problems/recharging_robot"
 SOLUTION_DIR="solutions/recharging_robot"
 LOG_DIR="logs/recharging_robot"
-PLANNER_IMAGE="./hapori_miplan_opt.img"  # Adjust if using ipc2018-opt-complementary2.img
+PLANNER_IMAGE="./hapori_miplan_opt.img"  
 
 # Check if planner image exists and is executable
 if [ ! -f "$PLANNER_IMAGE" ] || [ ! -x "$PLANNER_IMAGE" ]; then
