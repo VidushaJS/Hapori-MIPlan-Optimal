@@ -1,0 +1,249 @@
+INFO     planner time limit: 1800s
+INFO     planner memory limit: None
+
+INFO     Running alias (hapori-miplan-all-data-opt).
+INFO     search portfolio: /planner/portfolio_driver/portfolios/hapori-miplan-all-data-opt.py
+remaining time: 1799.0
+config 0: relative time 861, remaining time 1797, absolute time 861
+args: ['/usr/bin/python3', '/planner/plan.py', 'ipc2018-opt-scorpion', 'domains/rubiks_cube_domain.pddl', 'problems/rubiks_cube_temp/p06.pddl', 'solutions/rubiks_cube/p06_sol.txt', '--config', 'default']
+INFO     search stdin: None
+INFO     search time limit: 861s
+INFO     search memory limit: None
+INFO     search command line string: /usr/bin/python3 /planner/plan.py ipc2018-opt-scorpion domains/rubiks_cube_domain.pddl problems/rubiks_cube_temp/p06.pddl solutions/rubiks_cube/p06_sol.txt --config default
+INFO     Running translator.
+INFO     translator input: ['/home/vidusha/intelligent_systems/planners/hapori-miplan/domains/rubiks_cube_domain.pddl', '/home/vidusha/intelligent_systems/planners/hapori-miplan/problems/rubiks_cube_temp/p06.pddl']
+INFO     translator arguments: []
+INFO     translator time limit: 860.95s
+INFO     translator memory limit: None
+INFO     callstring: /usr/bin/python2 /planner/planners/ipc2018-opt-scorpion/builds/release64/bin/translate/translate.py /home/vidusha/intelligent_systems/planners/hapori-miplan/domains/rubiks_cube_domain.pddl /home/vidusha/intelligent_systems/planners/hapori-miplan/problems/rubiks_cube_temp/p06.pddl
+time limit 860.95 -> (861, 862)
+Parsing...
+Parsing: [0.000s CPU, 0.010s wall-clock]
+Normalizing task... [0.000s CPU, 0.000s wall-clock]
+Instantiating...
+Generating Datalog program... [0.010s CPU, 0.000s wall-clock]
+Normalizing Datalog program...
+Trivial rules: Converted to facts.
+Normalizing Datalog program: [0.000s CPU, 0.004s wall-clock]
+Preparing model... [0.000s CPU, 0.002s wall-clock]
+Generated 193 rules.
+Computing model... [0.010s CPU, 0.014s wall-clock]
+505 relevant atoms
+2304 auxiliary atoms
+2809 final queue length
+4653 total queue pushes
+Completing instantiation... [0.140s CPU, 0.136s wall-clock]
+Instantiating: [0.160s CPU, 0.157s wall-clock]
+Computing fact groups...
+Finding invariants...
+68 initial candidates
+Finding invariants: [0.000s CPU, 0.005s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
+Instantiating groups... [0.000s CPU, 0.000s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+480 uncovered facts
+Choosing groups: [0.000s CPU, 0.000s wall-clock]
+Building translation key... [0.000s CPU, 0.002s wall-clock]
+Computing fact groups: [0.010s CPU, 0.013s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.007s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.001s wall-clock]
+Building mutex information...
+Building mutex information: [0.010s CPU, 0.002s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Processing axioms: [0.000s CPU, 0.002s wall-clock]
+Translating task: [0.060s CPU, 0.060s wall-clock]
+0 effect conditions simplified
+0 implied preconditions added
+Detecting unreachable propositions...
+0 operators removed
+0 axioms removed
+0 propositions removed
+Detecting unreachable propositions: [0.030s CPU, 0.025s wall-clock]
+Reordering and filtering variables...
+480 of 480 variables necessary.
+0 of 0 mutex groups necessary.
+12 of 12 operators necessary.
+0 of 0 axiom rules necessary.
+Reordering and filtering variables: [0.010s CPU, 0.011s wall-clock]
+Translator variables: 480
+Translator derived variables: 0
+Translator facts: 960
+Translator goal facts: 20
+Translator mutex groups: 0
+Translator total mutex groups size: 0
+Translator operators: 12
+Translator axioms: 0
+Translator task size: 10688
+Translator peak memory: 34260 KB
+Writing output... [0.010s CPU, 0.009s wall-clock]
+Done! [0.290s CPU, 0.297s wall-clock]
+INFO     Run task transformation (/planner/planners/ipc2018-opt-scorpion/builds/h2-mutexes/bin/preprocess).
+INFO     callstring: /planner/planners/ipc2018-opt-scorpion/builds/h2-mutexes/bin/preprocess < output.sas
+Building causal graph...
+The causal graph is not acyclic.
+480 variables of 480 necessary
+0 of 0 mutex groups necessary.
+12 of 12 operators necessary.
+0 of 0 axiom rules necessary.
+Initializing mutex computation...
+Mutex computation initialized with 960 fluents.
+iteration for mutex detection and operator pruning
+Initialize m_index fw
+Initialized mvalues forward: reached=230400, notReached=690240, spurious=960
+Initialize m_ops fw
+Computing mutexes...
+Mutex computation finished with reached=920640, notReached=0, spurious=960
+0 operators are spurious because were not triggered
+H^2 mutexes added fw: 0, unreachable: 0
+0 of 12 operators detected as spurious
+Total mutex and disambiguation time: 0.028038 iterations: 2
+0 of 0 mutex groups necessary.
+12 of 12 operators necessary.
+0 of 0 axiom rules necessary.
+Change id of operators: 12
+Change id of mutexes
+Change id of goals
+Change id of initial state
+Remove unreachable facts from variables: 480
+0 of 0 mutex groups necessary.
+12 of 12 operators necessary.
+0 of 0 axiom rules necessary.
+Updating causal graph and pruning unnecessary facts
+480 variables of 480 of 480 necessary
+The causal graph is not acyclic.
+480 variables of 480 necessary
+0 of 0 mutex groups necessary.
+12 of 12 operators necessary.
+0 of 0 axiom rules necessary.
+Building domain transition graphs...
+solveable in poly time 0
+Building successor generator...
+Preprocessor variables: 480
+Preprocessor facts: 960
+Preprocessor derived variables: 0
+Preprocessor operators: 12
+Preprocessor mutex groups: 0
+Preprocessor task size: 10688
+Writing output...
+done
+INFO     Running search (release64).
+INFO     search input: output.sas
+INFO     search arguments: []
+INFO     search time limit: 860.52s
+INFO     search memory limit: None
+INFO     search executable: /planner/planners/ipc2018-opt-scorpion/builds/release64/bin/downward
+INFO     search portfolio: /planner/planners/ipc2018-opt-scorpion/driver/portfolios/seq_opt_scorpion.py
+Task has at least one conditional effect: 1 410 0 410 -1 1
+Exit codes: <generator object run_opt at 0x7f71b4210190>
+remaining time: 860.52
+config 0: relative time 1, remaining 1
+args: ['/planner/planners/ipc2018-opt-scorpion/builds/release64/bin/downward', '--search', 'astar(saturated_cost_partitioning([projections(systematic(3), create_complete_transition_system=true, max_time=300, max_peak_memory=2048)], max_time=200, max_optimization_time=2, diversify=true, random_seed=0, orders=greedy(random_seed=0)), pruning=stubborn_sets_simple(min_pruning_ratio=0.2))', '--internal-plan-file', '/home/vidusha/intelligent_systems/planners/hapori-miplan/solutions/rubiks_cube/p06_sol.txt']
+time limit 860.52 -> (861, 862)
+reading input... [t=2.2348e-05s]
+done reading input! [t=0.000666857s]
+packing state variables...done! [t=0.000666857s]
+Variables: 480
+FactPairs: 960
+Bytes per state: 60
+Building successor generator...done! [t=0.000666857s]
+peak memory difference for root successor generator creation: 0 KB
+time for root successor generation creation: 0s
+done initializing global data [t=0.000666857s]
+[t=0.000666857s, 5800 KB] Compute patterns
+building causal graph...done! [t=0.147549s]
+Found 692 SGA patterns.
+Found 3264 interesting patterns.
+[t=0.264227s, 28956 KB] Number of patterns: 3264
+[t=0.264227s, 28956 KB] Time for computing patterns: 0.26356s
+[t=0.264227s, 28956 KB] Build projections
+[t=0.371807s, 28956 KB] Time for building projections: 0.10758s
+[t=0.371807s, 28956 KB] Number of projections: 3264
+[t=0.371807s, 28956 KB] Abstractions: 3264
+[t=0.375874s, 28956 KB] Abstractions per generator: [3264]
+[t=0.375874s, 28956 KB] Initialize greedy order generator
+[t=0.379808s, 28956 KB] Time for computing h values and saturated costs: 0.003934s
+[t=0.379808s, 28956 KB] Done computing surplus costs
+[t=0.379808s, 28956 KB] Compute stolen costs
+[t=0.379808s, 28956 KB] Time for initializing greedy order generator: 0.003934s
+[t=0.383766s, 28956 KB] Start sampling
+[t=0.383766s, 28956 KB] Initial h value for sampling: 4
+[t=0.403721s, 28956 KB] Samples: 1000
+[t=0.403721s, 28956 KB] Sampling time: 0.019955s
+[t=0.475719s, 31904 KB] Covered abstract states: 17457/25080 = 0.696053
+[t=0.475719s, 31904 KB] Start computing cost partitionings
+[t=0.475719s, 31904 KB] Time for computing greedy order: 0s
+[t=0.475719s, 31904 KB] Incumbent h value: 4
+[t=2.47892s, 31904 KB] Time for optimizing order: 2.0032s
+[t=2.47892s, 31904 KB] Time for optimizing order has expired: 1
+[t=2.47892s, 31904 KB] Portfolio sum h value: 3832
+[t=4.48597s, 31904 KB] Portfolio sum h value: 3931
+[t=6.48894s, 31904 KB] Portfolio sum h value: 3956
+[t=16.5335s, 31904 KB] Portfolio sum h value: 3960
+[t=201.02s, 31904 KB] Orders: 4
+[t=201.024s, 31904 KB] Time for computing cost partitionings: 200.548s
+[t=201.024s, 31904 KB] Memory for cost partitionings: 0 KB
+[t=201.024s, 31904 KB] Stored lookup tables: 8/13056 = 0.000612745
+[t=201.024s, 31904 KB] Stored values: 64/100320 = 0.000637959
+[t=201.025s, 31904 KB] Stored heuristics: 8/3264 = 0.00245098
+Conducting best first search with reopening closed nodes, (real) bound = 2147483647
+New best heuristic value for saturated_cost_partitioning(list(projections(systematic(3), create_complete_transition_system = true, max_time = 300, max_peak_memory = 2048)), max_time = 200, max_optimization_time = 2, diversify = true, random_seed = 0, orders = greedy(random_seed = 0)): 4
+[g=0, 1 evaluated, 0 expanded, t=201.028s, 31904 KB]
+f = 4 [1 evaluated, 0 expanded, t=201.028s, 31904 KB]
+Initial heuristic value for saturated_cost_partitioning(list(projections(systematic(3), create_complete_transition_system = true, max_time = 300, max_peak_memory = 2048)), max_time = 200, max_optimization_time = 2, diversify = true, random_seed = 0, orders = greedy(random_seed = 0)): 4
+pruning method: stubborn sets simple
+f = 5 [13 evaluated, 1 expanded, t=201.029s, 31904 KB]
+New best heuristic value for saturated_cost_partitioning(list(projections(systematic(3), create_complete_transition_system = true, max_time = 300, max_peak_memory = 2048)), max_time = 200, max_optimization_time = 2, diversify = true, random_seed = 0, orders = greedy(random_seed = 0)): 3
+[g=2, 49 evaluated, 5 expanded, t=201.031s, 31904 KB]
+New best heuristic value for saturated_cost_partitioning(list(projections(systematic(3), create_complete_transition_system = true, max_time = 300, max_peak_memory = 2048)), max_time = 200, max_optimization_time = 2, diversify = true, random_seed = 0, orders = greedy(random_seed = 0)): 2
+[g=3, 121 evaluated, 12 expanded, t=201.033s, 31904 KB]
+f = 6 [170 evaluated, 17 expanded, t=201.033s, 31904 KB]
+New best heuristic value for saturated_cost_partitioning(list(projections(systematic(3), create_complete_transition_system = true, max_time = 300, max_peak_memory = 2048)), max_time = 200, max_optimization_time = 2, diversify = true, random_seed = 0, orders = greedy(random_seed = 0)): 1
+[g=5, 185 evaluated, 19 expanded, t=201.034s, 31904 KB]
+New best heuristic value for saturated_cost_partitioning(list(projections(systematic(3), create_complete_transition_system = true, max_time = 300, max_peak_memory = 2048)), max_time = 200, max_optimization_time = 2, diversify = true, random_seed = 0, orders = greedy(random_seed = 0)): 0
+[g=6, 195 evaluated, 20 expanded, t=201.035s, 31904 KB]
+Solution found!
+Actual search time: 0.00564509s [t=201.035s]
+lrev  (1)
+brev  (1)
+lrev  (1)
+drev  (1)
+frev  (1)
+drev  (1)
+Plan length: 6 step(s).
+Plan cost: 6
+Expanded 21 state(s).
+Reopened 0 state(s).
+Evaluated 202 state(s).
+Evaluations: 202
+Generated 240 state(s).
+Dead ends: 0 state(s).
+Expanded until last jump: 17 state(s).
+Reopened until last jump: 0 state(s).
+Evaluated until last jump: 170 state(s).
+Generated until last jump: 204 state(s).
+Number of registered states: 202
+Int hash set load factor: 202/256 = 0.789062
+Int hash set resizes: 8
+total successors before partial-order reduction: 240
+total successors after partial-order reduction: 240
+Number of times each order was the best order: [187, 11, 2, 1]
+Probably useful orders: 4/4 = 100%
+Search time: 0.00699194s
+Total time: 201.035s
+Solution found.
+Peak memory: 31904 KB
+exitcode: 0
+
+Image nick: ipc2018-opt-scorpion
+Configs: ['default']
+Plan file: /home/vidusha/intelligent_systems/planners/hapori-miplan/solutions/rubiks_cube/p06_sol.txt
+Run image config default
+Calling planner: ['python2', '/planner/planners/ipc2018-opt-scorpion/fast-downward.py', '--build=release64', '--plan-file', '/home/vidusha/intelligent_systems/planners/hapori-miplan/solutions/rubiks_cube/p06_sol.txt', '--transform-task', '/planner/planners/ipc2018-opt-scorpion/builds/h2-mutexes/bin/preprocess', '--alias', 'seq-opt-scorpion', '--overall-time-limit', '30m', '/home/vidusha/intelligent_systems/planners/hapori-miplan/domains/rubiks_cube_domain.pddl', '/home/vidusha/intelligent_systems/planners/hapori-miplan/problems/rubiks_cube_temp/p06.pddl']
+Found plan file(s): ['/home/vidusha/intelligent_systems/planners/hapori-miplan/solutions/rubiks_cube/p06_sol.txt']
+exitcode: 0
+
+Exit codes: [0]
+INFO     Planner time: 201.67s

@@ -1,0 +1,387 @@
+INFO     planner time limit: 1800s
+INFO     planner memory limit: None
+
+INFO     Running alias (hapori-miplan-all-data-opt).
+INFO     search portfolio: /planner/portfolio_driver/portfolios/hapori-miplan-all-data-opt.py
+remaining time: 1799.0
+config 0: relative time 861, remaining time 1797, absolute time 861
+args: ['/usr/bin/python3', '/planner/plan.py', 'ipc2018-opt-scorpion', 'domains/recharging_robot_domain.pddl', 'problems/recharging_robot/p17.pddl', 'solutions/recharging_robot/p17_sol.txt', '--config', 'default']
+INFO     search stdin: None
+INFO     search time limit: 861s
+INFO     search memory limit: None
+INFO     search command line string: /usr/bin/python3 /planner/plan.py ipc2018-opt-scorpion domains/recharging_robot_domain.pddl problems/recharging_robot/p17.pddl solutions/recharging_robot/p17_sol.txt --config default
+INFO     Running translator.
+INFO     translator input: ['/home/vidusha/intelligent_systems/planners/hapori-miplan/domains/recharging_robot_domain.pddl', '/home/vidusha/intelligent_systems/planners/hapori-miplan/problems/recharging_robot/p17.pddl']
+INFO     translator arguments: []
+INFO     translator time limit: 860.97s
+INFO     translator memory limit: None
+INFO     callstring: /usr/bin/python2 /planner/planners/ipc2018-opt-scorpion/builds/release64/bin/translate/translate.py /home/vidusha/intelligent_systems/planners/hapori-miplan/domains/recharging_robot_domain.pddl /home/vidusha/intelligent_systems/planners/hapori-miplan/problems/recharging_robot/p17.pddl
+time limit 860.97 -> (861, 862)
+Parsing...
+Parsing: [0.000s CPU, 0.008s wall-clock]
+Normalizing task... [0.000s CPU, 0.000s wall-clock]
+Instantiating...
+Generating Datalog program... [0.000s CPU, 0.001s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.000s CPU, 0.004s wall-clock]
+Preparing model... [0.010s CPU, 0.003s wall-clock]
+Generated 48 rules.
+Computing model... [17.010s CPU, 17.031s wall-clock]
+1638460 relevant atoms
+73438 auxiliary atoms
+1711898 final queue length
+5005920 total queue pushes
+Completing instantiation... [106.740s CPU, 106.770s wall-clock]
+Instantiating: [124.200s CPU, 124.253s wall-clock]
+Computing fact groups...
+Finding invariants...
+12 initial candidates
+Finding invariants: [1.260s CPU, 1.262s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
+Instantiating groups... [0.010s CPU, 0.001s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+70 uncovered facts
+Choosing groups: [0.000s CPU, 0.001s wall-clock]
+Building translation key... [0.000s CPU, 0.001s wall-clock]
+Computing fact groups: [1.270s CPU, 1.268s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.000s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Processing axioms: [2.550s CPU, 2.554s wall-clock]
+Command '['/usr/bin/python2', '/planner/planners/ipc2018-opt-scorpion/builds/release64/bin/translate/translate.py', '/home/vidusha/intelligent_systems/planners/hapori-miplan/domains/recharging_robot_domain.pddl', '/home/vidusha/intelligent_systems/planners/hapori-miplan/problems/recharging_robot/p17.pddl']' returned non-zero exit status -9
+Image nick: ipc2018-opt-scorpion
+Configs: ['default']
+Plan file: /home/vidusha/intelligent_systems/planners/hapori-miplan/solutions/recharging_robot/p17_sol.txt
+Run image config default
+Calling planner: ['python2', '/planner/planners/ipc2018-opt-scorpion/fast-downward.py', '--build=release64', '--plan-file', '/home/vidusha/intelligent_systems/planners/hapori-miplan/solutions/recharging_robot/p17_sol.txt', '--transform-task', '/planner/planners/ipc2018-opt-scorpion/builds/h2-mutexes/bin/preprocess', '--alias', 'seq-opt-scorpion', '--overall-time-limit', '30m', '/home/vidusha/intelligent_systems/planners/hapori-miplan/domains/recharging_robot_domain.pddl', '/home/vidusha/intelligent_systems/planners/hapori-miplan/problems/recharging_robot/p17.pddl']
+Found plan file(s): []
+exitcode: 99
+
+remaining time: 1629.44
+config 1: relative time 615, remaining time 936, absolute time 1070
+args: ['/usr/bin/python3', '/planner/plan.py', 'ipc2014-opt-symba1', 'domains/recharging_robot_domain.pddl', 'problems/recharging_robot/p17.pddl', 'solutions/recharging_robot/p17_sol.txt', '--config', 'default']
+INFO     search stdin: None
+INFO     search time limit: 1070s
+INFO     search memory limit: None
+INFO     search command line string: /usr/bin/python3 /planner/plan.py ipc2014-opt-symba1 domains/recharging_robot_domain.pddl problems/recharging_robot/p17.pddl solutions/recharging_robot/p17_sol.txt --config default
+1. Running translator
+Second argument is a file name: use two translator arguments.
+Parsing...
+Parsing: [0.010s CPU, 0.006s wall-clock]
+Normalizing task... [0.000s CPU, 0.001s wall-clock]
+Instantiating...
+Generating Datalog program... [0.000s CPU, 0.002s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.000s CPU, 0.008s wall-clock]
+Preparing model... [0.010s CPU, 0.003s wall-clock]
+Generated 48 rules.
+Computing model... [18.570s CPU, 18.583s wall-clock]
+1638460 relevant atoms
+73438 auxiliary atoms
+1711898 final queue length
+5005920 total queue pushes
+Completing instantiation... /planner/planners/ipc2014-opt-symba1/src/plan: line 34:  2264 Killed                  "$TRANSLATE" "$1" "$2"
+Image nick: ipc2014-opt-symba1
+Configs: ['default']
+Plan file: /home/vidusha/intelligent_systems/planners/hapori-miplan/solutions/recharging_robot/p17_sol.txt
+Run image config default
+Calling planner: ['/planner/planners/ipc2014-opt-symba1/plan', 'seq-opt-symba-1', '/home/vidusha/intelligent_systems/planners/hapori-miplan/domains/recharging_robot_domain.pddl', '/home/vidusha/intelligent_systems/planners/hapori-miplan/problems/recharging_robot/p17.pddl', '/home/vidusha/intelligent_systems/planners/hapori-miplan/solutions/recharging_robot/p17_sol.txt']
+Found plan file(s): []
+exitcode: 99
+
+remaining time: 1533.3999999999999
+config 2: relative time 158, remaining time 321, absolute time 754
+args: ['/usr/bin/python3', '/planner/plan.py', 'ipc2018-opt-metis', 'domains/recharging_robot_domain.pddl', 'problems/recharging_robot/p17.pddl', 'solutions/recharging_robot/p17_sol.txt', '--config', 'metis2']
+INFO     search stdin: None
+INFO     search time limit: 754s
+INFO     search memory limit: None
+INFO     search command line string: /usr/bin/python3 /planner/plan.py ipc2018-opt-metis domains/recharging_robot_domain.pddl problems/recharging_robot/p17.pddl solutions/recharging_robot/p17_sol.txt --config metis2
+INFO     Running translator.
+INFO     translator input: ['/home/vidusha/intelligent_systems/planners/hapori-miplan/domains/recharging_robot_domain.pddl', '/home/vidusha/intelligent_systems/planners/hapori-miplan/problems/recharging_robot/p17.pddl']
+INFO     translator arguments: []
+INFO     translator time limit: 753.95s
+INFO     translator memory limit: None
+INFO     callstring: /usr/bin/python2 /planner/planners/ipc2018-opt-metis/builds/release64/bin/translate/translate.py /home/vidusha/intelligent_systems/planners/hapori-miplan/domains/recharging_robot_domain.pddl /home/vidusha/intelligent_systems/planners/hapori-miplan/problems/recharging_robot/p17.pddl
+time limit 753.95 -> (754, 755)
+Parsing...
+Parsing: [0.010s CPU, 0.014s wall-clock]
+Normalizing task... [0.000s CPU, 0.001s wall-clock]
+Instantiating...
+Generating Datalog program... [0.000s CPU, 0.002s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.010s CPU, 0.007s wall-clock]
+Preparing model... [0.010s CPU, 0.007s wall-clock]
+Generated 48 rules.
+Computing model... [18.990s CPU, 18.999s wall-clock]
+1638460 relevant atoms
+73438 auxiliary atoms
+1711898 final queue length
+5005920 total queue pushes
+Completing instantiation... [107.150s CPU, 107.206s wall-clock]
+Instantiating: [126.610s CPU, 126.677s wall-clock]
+Computing fact groups...
+Finding invariants...
+12 initial candidates
+Finding invariants: [1.610s CPU, 1.607s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
+Instantiating groups... [0.000s CPU, 0.001s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+70 uncovered facts
+Choosing groups: [0.000s CPU, 0.001s wall-clock]
+Building translation key... [0.000s CPU, 0.001s wall-clock]
+Computing fact groups: [1.620s CPU, 1.614s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.000s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Processing axioms: [2.580s CPU, 2.579s wall-clock]
+Command '['/usr/bin/python2', '/planner/planners/ipc2018-opt-metis/builds/release64/bin/translate/translate.py', '/home/vidusha/intelligent_systems/planners/hapori-miplan/domains/recharging_robot_domain.pddl', '/home/vidusha/intelligent_systems/planners/hapori-miplan/problems/recharging_robot/p17.pddl']' returned non-zero exit status -9
+Image nick: ipc2018-opt-metis
+Configs: ['metis2']
+Plan file: /home/vidusha/intelligent_systems/planners/hapori-miplan/solutions/recharging_robot/p17_sol.txt
+Run image config metis2
+Calling planner: ['python2', '/planner/planners/ipc2018-opt-metis/fast-downward.py', '--build=release64', '--plan-file', '/home/vidusha/intelligent_systems/planners/hapori-miplan/solutions/recharging_robot/p17_sol.txt', '--transform-task', '/planner/planners/ipc2018-opt-metis/builds/release64/bin/preprocess', '--overall-time-limit', '30m', '/home/vidusha/intelligent_systems/planners/hapori-miplan/domains/recharging_robot_domain.pddl', '/home/vidusha/intelligent_systems/planners/hapori-miplan/problems/recharging_robot/p17.pddl', '--symmetries', 'sym=structural_symmetries(search_symmetries=dks)', '--search', 'astar(max([celmcut,lmcount(lm_factory=lm_merged([lm_rhw,lm_hm(m=1)]),admissible=true,transform=multiply_out_conditional_effects)]),symmetries=sym,pruning=stubborn_sets_simple(minimum_pruning_ratio=0.01),num_por_probes=1000)']
+Found plan file(s): []
+exitcode: 99
+
+remaining time: 1353.7199999999998
+config 3: relative time 89, remaining time 163, absolute time 739
+args: ['/usr/bin/python3', '/planner/plan.py', 'ipc2018-decstar', 'domains/recharging_robot_domain.pddl', 'problems/recharging_robot/p17.pddl', 'solutions/recharging_robot/p17_sol.txt', '--config', 'opt-config06']
+INFO     search stdin: None
+INFO     search time limit: 739s
+INFO     search memory limit: None
+INFO     search command line string: /usr/bin/python3 /planner/plan.py ipc2018-decstar domains/recharging_robot_domain.pddl problems/recharging_robot/p17.pddl solutions/recharging_robot/p17_sol.txt --config opt-config06
+INFO     Running translator.
+INFO     translator inputs: ['/home/vidusha/intelligent_systems/planners/hapori-miplan/domains/recharging_robot_domain.pddl', '/home/vidusha/intelligent_systems/planners/hapori-miplan/problems/recharging_robot/p17.pddl']
+INFO     translator arguments: []
+Parsing...
+Parsing: [0.010s CPU, 0.005s wall-clock]
+Normalizing task... [0.000s CPU, 0.001s wall-clock]
+Instantiating...
+Generating Datalog program... [0.000s CPU, 0.002s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.000s CPU, 0.006s wall-clock]
+Preparing model... [0.000s CPU, 0.005s wall-clock]
+Generated 48 rules.
+Computing model... [18.480s CPU, 18.505s wall-clock]
+1638460 relevant atoms
+73438 auxiliary atoms
+1711898 final queue length
+5005920 total queue pushes
+Completing instantiation... Command '['/planner/planners/ipc2018-decstar/src/translate/translate.py', '/home/vidusha/intelligent_systems/planners/hapori-miplan/domains/recharging_robot_domain.pddl', '/home/vidusha/intelligent_systems/planners/hapori-miplan/problems/recharging_robot/p17.pddl']' returned non-zero exit status -9
+Image nick: ipc2018-decstar
+Configs: ['opt-config06']
+Plan file: /home/vidusha/intelligent_systems/planners/hapori-miplan/solutions/recharging_robot/p17_sol.txt
+Run image config opt-config06
+Calling planner: ['python2', '/planner/planners/ipc2018-decstar/src/fast-downward.py', '--plan-file', '/home/vidusha/intelligent_systems/planners/hapori-miplan/solutions/recharging_robot/p17_sol.txt', '/home/vidusha/intelligent_systems/planners/hapori-miplan/domains/recharging_robot_domain.pddl', '/home/vidusha/intelligent_systems/planners/hapori-miplan/problems/recharging_robot/p17.pddl', '--preprocess-options', '--h2-time-limit', '120', '--search-options', '--search', 'astar(blind)']
+Found plan file(s): []
+exitcode: 99
+
+remaining time: 1259.9499999999998
+config 4: relative time 27, remaining time 74, absolute time 459
+args: ['/usr/bin/python3', '/planner/plan.py', 'ipc2018-decstar', 'domains/recharging_robot_domain.pddl', 'problems/recharging_robot/p17.pddl', 'solutions/recharging_robot/p17_sol.txt', '--config', 'opt-config00']
+INFO     search stdin: None
+INFO     search time limit: 459s
+INFO     search memory limit: None
+INFO     search command line string: /usr/bin/python3 /planner/plan.py ipc2018-decstar domains/recharging_robot_domain.pddl problems/recharging_robot/p17.pddl solutions/recharging_robot/p17_sol.txt --config opt-config00
+INFO     Running translator.
+INFO     translator inputs: ['/home/vidusha/intelligent_systems/planners/hapori-miplan/domains/recharging_robot_domain.pddl', '/home/vidusha/intelligent_systems/planners/hapori-miplan/problems/recharging_robot/p17.pddl']
+INFO     translator arguments: []
+Parsing...
+Parsing: [0.010s CPU, 0.005s wall-clock]
+Normalizing task... [0.000s CPU, 0.001s wall-clock]
+Instantiating...
+Generating Datalog program... [0.000s CPU, 0.002s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.010s CPU, 0.006s wall-clock]
+Preparing model... [0.000s CPU, 0.005s wall-clock]
+Generated 48 rules.
+Computing model... [20.110s CPU, 20.127s wall-clock]
+1638460 relevant atoms
+73438 auxiliary atoms
+1711898 final queue length
+5005920 total queue pushes
+Completing instantiation... Command '['/planner/planners/ipc2018-decstar/src/translate/translate.py', '/home/vidusha/intelligent_systems/planners/hapori-miplan/domains/recharging_robot_domain.pddl', '/home/vidusha/intelligent_systems/planners/hapori-miplan/problems/recharging_robot/p17.pddl']' returned non-zero exit status -9
+Image nick: ipc2018-decstar
+Configs: ['opt-config00']
+Plan file: /home/vidusha/intelligent_systems/planners/hapori-miplan/solutions/recharging_robot/p17_sol.txt
+Run image config opt-config00
+Calling planner: ['python2', '/planner/planners/ipc2018-decstar/src/fast-downward.py', '--plan-file', '/home/vidusha/intelligent_systems/planners/hapori-miplan/solutions/recharging_robot/p17_sol.txt', '/home/vidusha/intelligent_systems/planners/hapori-miplan/domains/recharging_robot_domain.pddl', '/home/vidusha/intelligent_systems/planners/hapori-miplan/problems/recharging_robot/p17.pddl', '--preprocess-options', '--h2-time-limit', '120', '--search-options', '--decoupling', 'fork(search_type=asda, pruning=cost_frontier(irrelevance=TRANSITIONS), max_leaf_size=10000000)', '--search', 'astar(lmcut,       pruning_heuristic=lmcut(search_type=STAR),      pruning=stubborn_sets_decoupled(min_pruning_ratio=0.2, special_case_optimizations=true))']
+Found plan file(s): []
+exitcode: 99
+
+remaining time: 1147.62
+config 5: relative time 17, remaining time 47, absolute time 415
+args: ['/usr/bin/python3', '/planner/plan.py', 'ipc2018-decstar', 'domains/recharging_robot_domain.pddl', 'problems/recharging_robot/p17.pddl', 'solutions/recharging_robot/p17_sol.txt', '--config', 'opt-config01']
+INFO     search stdin: None
+INFO     search time limit: 415s
+INFO     search memory limit: None
+INFO     search command line string: /usr/bin/python3 /planner/plan.py ipc2018-decstar domains/recharging_robot_domain.pddl problems/recharging_robot/p17.pddl solutions/recharging_robot/p17_sol.txt --config opt-config01
+INFO     Running translator.
+INFO     translator inputs: ['/home/vidusha/intelligent_systems/planners/hapori-miplan/domains/recharging_robot_domain.pddl', '/home/vidusha/intelligent_systems/planners/hapori-miplan/problems/recharging_robot/p17.pddl']
+INFO     translator arguments: []
+Parsing...
+Parsing: [0.000s CPU, 0.004s wall-clock]
+Normalizing task... [0.000s CPU, 0.001s wall-clock]
+Instantiating...
+Generating Datalog program... [0.000s CPU, 0.002s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.010s CPU, 0.005s wall-clock]
+Preparing model... [0.000s CPU, 0.003s wall-clock]
+Generated 48 rules.
+Computing model... [19.730s CPU, 19.749s wall-clock]
+1638460 relevant atoms
+73438 auxiliary atoms
+1711898 final queue length
+5005920 total queue pushes
+Completing instantiation... Command '['/planner/planners/ipc2018-decstar/src/translate/translate.py', '/home/vidusha/intelligent_systems/planners/hapori-miplan/domains/recharging_robot_domain.pddl', '/home/vidusha/intelligent_systems/planners/hapori-miplan/problems/recharging_robot/p17.pddl']' returned non-zero exit status -9
+Image nick: ipc2018-decstar
+Configs: ['opt-config01']
+Plan file: /home/vidusha/intelligent_systems/planners/hapori-miplan/solutions/recharging_robot/p17_sol.txt
+Run image config opt-config01
+Calling planner: ['python2', '/planner/planners/ipc2018-decstar/src/fast-downward.py', '--plan-file', '/home/vidusha/intelligent_systems/planners/hapori-miplan/solutions/recharging_robot/p17_sol.txt', '/home/vidusha/intelligent_systems/planners/hapori-miplan/domains/recharging_robot_domain.pddl', '/home/vidusha/intelligent_systems/planners/hapori-miplan/problems/recharging_robot/p17.pddl', '--preprocess-options', '--h2-time-limit', '120', '--search-options', '--decoupling', 'portfolio(fallback_on_abstain=false, overwrite_options=true, choose_max_leaves=true, factorings=[fork(search_type=asda, max_leaf_size=10000000), ifork(max_leaf_size=10000000), incarcs(max_leaf_size=1000000)])', '--search', 'astar(lmcut,      pruning_heuristic=lmcut(search_type=STAR),      pruning=stubborn_sets_decoupled(min_pruning_ratio=0.2, special_case_optimizations=true, use_single_var_ifork_optimization=true),      symmetry=symmetry_state_pruning(lex_prices=true, lex_num_states=false, lex_goal_cost=false))']
+Found plan file(s): []
+exitcode: 99
+
+remaining time: 1058.8199999999997
+config 6: relative time 16, remaining time 30, absolute time 564
+args: ['/usr/bin/python3', '/planner/plan.py', 'ipc2018-opt-delfi', 'domains/recharging_robot_domain.pddl', 'problems/recharging_robot/p17.pddl', 'solutions/recharging_robot/p17_sol.txt', '--config', 'h2-simpless-oss-cpdbshc900']
+INFO     search stdin: None
+INFO     search time limit: 564s
+INFO     search memory limit: None
+INFO     search command line string: /usr/bin/python3 /planner/plan.py ipc2018-opt-delfi domains/recharging_robot_domain.pddl problems/recharging_robot/p17.pddl solutions/recharging_robot/p17_sol.txt --config h2-simpless-oss-cpdbshc900
+INFO     Running translator.
+INFO     translator input: ['/home/vidusha/intelligent_systems/planners/hapori-miplan/domains/recharging_robot_domain.pddl', '/home/vidusha/intelligent_systems/planners/hapori-miplan/problems/recharging_robot/p17.pddl']
+INFO     translator arguments: []
+INFO     translator time limit: 563.95s
+INFO     translator memory limit: None
+INFO     callstring: /usr/bin/python2 /planner/planners/ipc2018-opt-delfi/builds/release64/bin/translate/translate.py /home/vidusha/intelligent_systems/planners/hapori-miplan/domains/recharging_robot_domain.pddl /home/vidusha/intelligent_systems/planners/hapori-miplan/problems/recharging_robot/p17.pddl
+time limit 563.95 -> (564, 565)
+Parsing...
+Parsing: [0.000s CPU, 0.008s wall-clock]
+Normalizing task... [0.000s CPU, 0.000s wall-clock]
+Instantiating...
+Generating Datalog program... [0.000s CPU, 0.002s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.010s CPU, 0.005s wall-clock]
+Preparing model... [0.000s CPU, 0.004s wall-clock]
+Generated 48 rules.
+Computing model... [16.960s CPU, 16.973s wall-clock]
+1638460 relevant atoms
+73438 auxiliary atoms
+1711898 final queue length
+5005920 total queue pushes
+Completing instantiation... [120.340s CPU, 120.397s wall-clock]
+Instantiating: [137.760s CPU, 137.834s wall-clock]
+Computing fact groups...
+Finding invariants...
+12 initial candidates
+Finding invariants: [1.270s CPU, 1.275s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
+Instantiating groups... [0.000s CPU, 0.001s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+70 uncovered facts
+Choosing groups: [0.000s CPU, 0.001s wall-clock]
+Building translation key... [0.000s CPU, 0.001s wall-clock]
+Computing fact groups: [1.280s CPU, 1.281s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.000s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Processing axioms: [2.510s CPU, 2.510s wall-clock]
+Command '['/usr/bin/python2', '/planner/planners/ipc2018-opt-delfi/builds/release64/bin/translate/translate.py', '/home/vidusha/intelligent_systems/planners/hapori-miplan/domains/recharging_robot_domain.pddl', '/home/vidusha/intelligent_systems/planners/hapori-miplan/problems/recharging_robot/p17.pddl']' returned non-zero exit status -9
+Overall time: [200.000s CPU, 1421.828s wall-clock]
+Image nick: ipc2018-opt-delfi
+Configs: ['h2-simpless-oss-cpdbshc900']
+Plan file: /home/vidusha/intelligent_systems/planners/hapori-miplan/solutions/recharging_robot/p17_sol.txt
+Run image config h2-simpless-oss-cpdbshc900
+Calling planner: ['python2', '/planner/planners/ipc2018-opt-delfi/fast-downward.py', '--build', 'release64', '--transform-task', '/planner/planners/ipc2018-opt-delfi/builds/release64/bin/preprocess', '--plan-file', '/home/vidusha/intelligent_systems/planners/hapori-miplan/solutions/recharging_robot/p17_sol.txt', '/home/vidusha/intelligent_systems/planners/hapori-miplan/domains/recharging_robot_domain.pddl', '/home/vidusha/intelligent_systems/planners/hapori-miplan/problems/recharging_robot/p17.pddl', '--symmetries', 'sym=structural_symmetries(search_symmetries=oss)', '--search', 'astar(cpdbs(patterns=hillclimbing(max_time=900),transform=multiply_out_conditional_effects),symmetries=sym,pruning=stubborn_sets_simple(minimum_pruning_ratio=0.01),num_por_probes=1000)']
+Found plan file(s): []
+exitcode: 99
+
+remaining time: 858.6799999999998
+config 7: relative time 14, remaining time 14, absolute time 858
+args: ['/usr/bin/python3', '/planner/plan.py', 'ipc2018-opt-delfi', 'domains/recharging_robot_domain.pddl', 'problems/recharging_robot/p17.pddl', 'solutions/recharging_robot/p17_sol.txt', '--config', 'simpless-dks-masb50kmiasmdfp']
+INFO     search stdin: None
+INFO     search time limit: 858s
+INFO     search memory limit: None
+INFO     search command line string: /usr/bin/python3 /planner/plan.py ipc2018-opt-delfi domains/recharging_robot_domain.pddl problems/recharging_robot/p17.pddl solutions/recharging_robot/p17_sol.txt --config simpless-dks-masb50kmiasmdfp
+INFO     Running translator.
+INFO     translator input: ['/home/vidusha/intelligent_systems/planners/hapori-miplan/domains/recharging_robot_domain.pddl', '/home/vidusha/intelligent_systems/planners/hapori-miplan/problems/recharging_robot/p17.pddl']
+INFO     translator arguments: []
+INFO     translator time limit: 857.94s
+INFO     translator memory limit: None
+INFO     callstring: /usr/bin/python2 /planner/planners/ipc2018-opt-delfi/builds/release64/bin/translate/translate.py /home/vidusha/intelligent_systems/planners/hapori-miplan/domains/recharging_robot_domain.pddl /home/vidusha/intelligent_systems/planners/hapori-miplan/problems/recharging_robot/p17.pddl
+time limit 857.94 -> (858, 859)
+Parsing...
+Parsing: [0.000s CPU, 0.010s wall-clock]
+Normalizing task... [0.000s CPU, 0.000s wall-clock]
+Instantiating...
+Generating Datalog program... [0.000s CPU, 0.002s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.010s CPU, 0.006s wall-clock]
+Preparing model... [0.010s CPU, 0.006s wall-clock]
+Generated 48 rules.
+Computing model... [19.220s CPU, 19.238s wall-clock]
+1638460 relevant atoms
+73438 auxiliary atoms
+1711898 final queue length
+5005920 total queue pushes
+Completing instantiation... [88.910s CPU, 88.940s wall-clock]
+Instantiating: [108.600s CPU, 108.643s wall-clock]
+Computing fact groups...
+Finding invariants...
+12 initial candidates
+Finding invariants: [1.240s CPU, 1.241s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
+Instantiating groups... [0.000s CPU, 0.001s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+70 uncovered facts
+Choosing groups: [0.000s CPU, 0.001s wall-clock]
+Building translation key... [0.010s CPU, 0.001s wall-clock]
+Computing fact groups: [1.250s CPU, 1.247s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.000s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Processing axioms: [2.490s CPU, 2.501s wall-clock]
+Command '['/usr/bin/python2', '/planner/planners/ipc2018-opt-delfi/builds/release64/bin/translate/translate.py', '/home/vidusha/intelligent_systems/planners/hapori-miplan/domains/recharging_robot_domain.pddl', '/home/vidusha/intelligent_systems/planners/hapori-miplan/problems/recharging_robot/p17.pddl']' returned non-zero exit status -9
+Overall time: [151.250s CPU, 520.428s wall-clock]
+Image nick: ipc2018-opt-delfi
+Configs: ['simpless-dks-masb50kmiasmdfp']
+Plan file: /home/vidusha/intelligent_systems/planners/hapori-miplan/solutions/recharging_robot/p17_sol.txt
+Run image config simpless-dks-masb50kmiasmdfp
+Calling planner: ['python2', '/planner/planners/ipc2018-opt-delfi/fast-downward.py', '--build', 'release64', '--plan-file', '/home/vidusha/intelligent_systems/planners/hapori-miplan/solutions/recharging_robot/p17_sol.txt', '/home/vidusha/intelligent_systems/planners/hapori-miplan/domains/recharging_robot_domain.pddl', '/home/vidusha/intelligent_systems/planners/hapori-miplan/problems/recharging_robot/p17.pddl', '--symmetries', 'sym=structural_symmetries(search_symmetries=dks)', '--search', 'astar(merge_and_shrink(shrink_strategy=shrink_bisimulation(greedy=false),merge_strategy=merge_precomputed(merge_tree=miasm(abstraction=miasm_merge_and_shrink(),fallback_merge_selector=score_based_filtering(scoring_functions=[goal_relevance,dfp,total_order(atomic_ts_order=reverse_level,product_ts_order=new_to_old,atomic_before_product=false)]))),label_reduction=exact(before_shrinking=true,before_merging=false),max_states=50000,threshold_before_merge=1,max_time=900),symmetries=sym,pruning=stubborn_sets_simple(minimum_pruning_ratio=0.01),num_por_probes=1000)']
+Found plan file(s): []
+exitcode: 99
+
+Exit codes: [99, 99, 99, 99, 99, 99, 99, 99]
+Traceback (most recent call last):
+  File "/planner/run-portfolio.py", line 5, in <module>
+    main()
+  File "/planner/portfolio_driver/main.py", line 46, in main
+    (exitcode, continue_execution) = run_portfolio(args)
+  File "/planner/portfolio_driver/main.py", line 32, in run_portfolio
+    time_limit, memory_limit)
+  File "/planner/portfolio_driver/portfolio_runner.py", line 177, in run
+    return returncodes.generate_portfolio_exitcode(list(exitcodes))
+  File "/planner/portfolio_driver/returncodes.py", line 106, in generate_portfolio_exitcode
+    assert False, "Error: Unhandled exit codes: {}".format(exitcodes)
+AssertionError: Error: Unhandled exit codes: {99}

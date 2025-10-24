@@ -1,0 +1,7 @@
+(lrev )
+(brev )
+(lrev )
+(drev )
+(frev )
+(drev )
+; cost = 6 (unit cost)

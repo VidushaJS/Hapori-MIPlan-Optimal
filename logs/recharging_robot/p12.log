@@ -1,0 +1,517 @@
+INFO     planner time limit: 1800s
+INFO     planner memory limit: None
+
+INFO     Running alias (hapori-miplan-all-data-opt).
+INFO     search portfolio: /planner/portfolio_driver/portfolios/hapori-miplan-all-data-opt.py
+remaining time: 1799.0
+config 0: relative time 861, remaining time 1797, absolute time 861
+args: ['/usr/bin/python3', '/planner/plan.py', 'ipc2018-opt-scorpion', 'domains/recharging_robot_domain.pddl', 'problems/recharging_robot/p12.pddl', 'solutions/recharging_robot/p12_sol.txt', '--config', 'default']
+INFO     search stdin: None
+INFO     search time limit: 861s
+INFO     search memory limit: None
+INFO     search command line string: /usr/bin/python3 /planner/plan.py ipc2018-opt-scorpion domains/recharging_robot_domain.pddl problems/recharging_robot/p12.pddl solutions/recharging_robot/p12_sol.txt --config default
+INFO     Running translator.
+INFO     translator input: ['/home/vidusha/intelligent_systems/planners/hapori-miplan/domains/recharging_robot_domain.pddl', '/home/vidusha/intelligent_systems/planners/hapori-miplan/problems/recharging_robot/p12.pddl']
+INFO     translator arguments: []
+INFO     translator time limit: 860.99s
+INFO     translator memory limit: None
+INFO     callstring: /usr/bin/python2 /planner/planners/ipc2018-opt-scorpion/builds/release64/bin/translate/translate.py /home/vidusha/intelligent_systems/planners/hapori-miplan/domains/recharging_robot_domain.pddl /home/vidusha/intelligent_systems/planners/hapori-miplan/problems/recharging_robot/p12.pddl
+time limit 860.99 -> (861, 862)
+Parsing...
+Parsing: [0.010s CPU, 0.006s wall-clock]
+Normalizing task... [0.000s CPU, 0.000s wall-clock]
+Instantiating...
+Generating Datalog program... [0.000s CPU, 0.001s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.000s CPU, 0.003s wall-clock]
+Preparing model... [0.000s CPU, 0.002s wall-clock]
+Generated 48 rules.
+Computing model... [2.180s CPU, 2.181s wall-clock]
+266978 relevant atoms
+30201 auxiliary atoms
+297179 final queue length
+849068 total queue pushes
+Completing instantiation... [8.690s CPU, 8.691s wall-clock]
+Instantiating: [10.920s CPU, 10.932s wall-clock]
+Computing fact groups...
+Finding invariants...
+12 initial candidates
+Finding invariants: [0.170s CPU, 0.165s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
+Instantiating groups... [0.000s CPU, 0.001s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+69 uncovered facts
+Choosing groups: [0.000s CPU, 0.001s wall-clock]
+Building translation key... [0.000s CPU, 0.000s wall-clock]
+Computing fact groups: [0.170s CPU, 0.168s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.000s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Processing axioms: [0.330s CPU, 0.334s wall-clock]
+Translating task: [6.480s CPU, 6.487s wall-clock]
+130 effect conditions simplified
+0 implied preconditions added
+Detecting unreachable propositions...
+0 operators removed
+0 axioms removed
+6 propositions removed
+Detecting unreachable propositions: [3.400s CPU, 3.404s wall-clock]
+Reordering and filtering variables...
+31 of 75 variables necessary.
+0 of 6 mutex groups necessary.
+184148 of 184148 operators necessary.
+2 of 2 axiom rules necessary.
+Reordering and filtering variables: [0.630s CPU, 0.633s wall-clock]
+Translator variables: 31
+Translator derived variables: 2
+Translator facts: 302
+Translator goal facts: 2
+Translator mutex groups: 0
+Translator total mutex groups size: 0
+Translator operators: 184148
+Translator axioms: 2
+Translator task size: 1269307
+Translator peak memory: 1110272 KB
+Writing output... [1.010s CPU, 1.026s wall-clock]
+Done! [22.880s CPU, 22.920s wall-clock]
+INFO     Run task transformation (/planner/planners/ipc2018-opt-scorpion/builds/h2-mutexes/bin/preprocess).
+INFO     callstring: /planner/planners/ipc2018-opt-scorpion/builds/h2-mutexes/bin/preprocess < output.sas
+Building causal graph...
+The causal graph is not acyclic.
+31 variables of 31 necessary
+0 of 0 mutex groups necessary.
+184148 of 184148 operators necessary.
+2 of 2 axiom rules necessary.
+Disabling h2 analysis because it does not currently support axioms
+Building domain transition graphs...
+solveable in poly time 0
+Building successor generator...
+Preprocessor variables: 31
+Preprocessor facts: 302
+Preprocessor derived variables: 2
+Preprocessor operators: 184148
+Preprocessor mutex groups: 0
+Preprocessor task size: 1269307
+Writing output...
+done
+INFO     Running search (release64).
+INFO     search input: output.sas
+INFO     search arguments: []
+INFO     search time limit: 831.49s
+INFO     search memory limit: None
+INFO     search executable: /planner/planners/ipc2018-opt-scorpion/builds/release64/bin/downward
+INFO     search portfolio: /planner/planners/ipc2018-opt-scorpion/driver/portfolios/seq_opt_scorpion.py
+Task has no conditional effects
+Exit codes: <generator object run_opt at 0x7f8576522370>
+remaining time: 831.49
+config 0: relative time 1, remaining 1
+args: ['/planner/planners/ipc2018-opt-scorpion/builds/release64/bin/downward', '--search', 'astar(saturated_cost_partitioning([projections(systematic(2), max_time=100, max_peak_memory=2048), projections(hillclimbing(max_time=100, random_seed=0)), cartesian()], max_time=200, max_optimization_time=2, diversify=true, random_seed=0, orders=greedy(random_seed=0)), pruning=stubborn_sets_simple(min_pruning_ratio=0.2))', '--internal-plan-file', '/home/vidusha/intelligent_systems/planners/hapori-miplan/solutions/recharging_robot/p12_sol.txt']
+time limit 831.49 -> (832, 833)
+reading input... [t=2.6332e-05s]
+done reading input! [t=0.430127s]
+packing state variables...done! [t=0.430127s]
+Variables: 31
+FactPairs: 302
+Bytes per state: 8
+Building successor generator...done! [t=0.470431s]
+peak memory difference for root successor generator creation: 21740 KB
+time for root successor generation creation: 0.0403034s
+done initializing global data [t=0.470431s]
+This configuration does not support axioms!
+Terminating.
+Tried to use unsupported feature.
+Peak memory: 100472 KB
+exitcode: 3
+
+Error: Unexpected exit codes: [3]
+Command '['run-portfolio', '/planner/planners/ipc2018-opt-scorpion/driver/portfolios/seq_opt_scorpion.py']' returned non-zero exit status 3
+Image nick: ipc2018-opt-scorpion
+Configs: ['default']
+Plan file: /home/vidusha/intelligent_systems/planners/hapori-miplan/solutions/recharging_robot/p12_sol.txt
+Run image config default
+Calling planner: ['python2', '/planner/planners/ipc2018-opt-scorpion/fast-downward.py', '--build=release64', '--plan-file', '/home/vidusha/intelligent_systems/planners/hapori-miplan/solutions/recharging_robot/p12_sol.txt', '--transform-task', '/planner/planners/ipc2018-opt-scorpion/builds/h2-mutexes/bin/preprocess', '--alias', 'seq-opt-scorpion', '--overall-time-limit', '30m', '/home/vidusha/intelligent_systems/planners/hapori-miplan/domains/recharging_robot_domain.pddl', '/home/vidusha/intelligent_systems/planners/hapori-miplan/problems/recharging_robot/p12.pddl']
+Found plan file(s): []
+exitcode: 99
+
+remaining time: 1768.29
+config 1: relative time 615, remaining time 936, absolute time 1161
+args: ['/usr/bin/python3', '/planner/plan.py', 'ipc2014-opt-symba1', 'domains/recharging_robot_domain.pddl', 'problems/recharging_robot/p12.pddl', 'solutions/recharging_robot/p12_sol.txt', '--config', 'default']
+INFO     search stdin: None
+INFO     search time limit: 1161s
+INFO     search memory limit: None
+INFO     search command line string: /usr/bin/python3 /planner/plan.py ipc2014-opt-symba1 domains/recharging_robot_domain.pddl problems/recharging_robot/p12.pddl solutions/recharging_robot/p12_sol.txt --config default
+1. Running translator
+Second argument is a file name: use two translator arguments.
+Parsing...
+Parsing: [0.000s CPU, 0.001s wall-clock]
+Normalizing task... [0.000s CPU, 0.000s wall-clock]
+Instantiating...
+Generating Datalog program... [0.000s CPU, 0.001s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.000s CPU, 0.003s wall-clock]
+Preparing model... [0.000s CPU, 0.002s wall-clock]
+Generated 48 rules.
+Computing model... [2.400s CPU, 2.390s wall-clock]
+266978 relevant atoms
+30201 auxiliary atoms
+297179 final queue length
+849068 total queue pushes
+Completing instantiation... [10.730s CPU, 10.733s wall-clock]
+Instantiating: [13.180s CPU, 13.189s wall-clock]
+Computing fact groups...
+Finding invariants...
+12 initial candidates
+Finding invariants: [0.160s CPU, 0.161s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
+Instantiating groups... [0.000s CPU, 0.001s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+69 uncovered facts
+Choosing groups: [0.000s CPU, 0.001s wall-clock]
+Building translation key... [0.000s CPU, 0.000s wall-clock]
+Computing fact groups: [0.160s CPU, 0.164s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.000s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Processing axioms: [0.350s CPU, 0.349s wall-clock]
+Translating task: [5.150s CPU, 5.146s wall-clock]
+0 implied effects removed
+130 effect conditions simplified
+0 implied preconditions added
+Detecting unreachable propositions...
+0 operators removed
+6 propositions removed
+Detecting unreachable propositions: [0.650s CPU, 0.647s wall-clock]
+Translator variables: 75
+Translator derived variables: 2
+Translator facts: 390
+Translator mutex groups: 6
+Translator total mutex groups size: 252
+Translator operators: 184148
+Translator task size: 1270565
+Translator peak memory: 1231376 KB
+Writing output... [1.020s CPU, 1.054s wall-clock]
+Done! [20.540s CPU, 20.583s wall-clock]
+
+2. Running preprocessor
+Building causal graph...
+The causal graph is not acyclic.
+31 variables of 75 necessary
+0 of 6 mutex groups necessary.
+184148 of 184148 operators necessary.
+2 of 2 axiom rules necessary.
+Initializing mutex computation...
+Mutex computation initialized with 302 fluents.
+iteration for mutex detection and operator pruning
+Initialize m_index fw
+Initialized mvalues forward: reached=961, notReached=77461, spurious=12782
+Initialize m_ops fw
+Error, axioms not supported by h2
+Image nick: ipc2014-opt-symba1
+Configs: ['default']
+Plan file: /home/vidusha/intelligent_systems/planners/hapori-miplan/solutions/recharging_robot/p12_sol.txt
+Run image config default
+Calling planner: ['/planner/planners/ipc2014-opt-symba1/plan', 'seq-opt-symba-1', '/home/vidusha/intelligent_systems/planners/hapori-miplan/domains/recharging_robot_domain.pddl', '/home/vidusha/intelligent_systems/planners/hapori-miplan/problems/recharging_robot/p12.pddl', '/home/vidusha/intelligent_systems/planners/hapori-miplan/solutions/recharging_robot/p12_sol.txt']
+Found plan file(s): []
+exitcode: 99
+
+remaining time: 1746.05
+config 2: relative time 158, remaining time 321, absolute time 859
+args: ['/usr/bin/python3', '/planner/plan.py', 'ipc2018-opt-metis', 'domains/recharging_robot_domain.pddl', 'problems/recharging_robot/p12.pddl', 'solutions/recharging_robot/p12_sol.txt', '--config', 'metis2']
+INFO     search stdin: None
+INFO     search time limit: 859s
+INFO     search memory limit: None
+INFO     search command line string: /usr/bin/python3 /planner/plan.py ipc2018-opt-metis domains/recharging_robot_domain.pddl problems/recharging_robot/p12.pddl solutions/recharging_robot/p12_sol.txt --config metis2
+INFO     Running translator.
+INFO     translator input: ['/home/vidusha/intelligent_systems/planners/hapori-miplan/domains/recharging_robot_domain.pddl', '/home/vidusha/intelligent_systems/planners/hapori-miplan/problems/recharging_robot/p12.pddl']
+INFO     translator arguments: []
+INFO     translator time limit: 858.98s
+INFO     translator memory limit: None
+INFO     callstring: /usr/bin/python2 /planner/planners/ipc2018-opt-metis/builds/release64/bin/translate/translate.py /home/vidusha/intelligent_systems/planners/hapori-miplan/domains/recharging_robot_domain.pddl /home/vidusha/intelligent_systems/planners/hapori-miplan/problems/recharging_robot/p12.pddl
+time limit 858.98 -> (859, 860)
+Parsing...
+Parsing: [0.010s CPU, 0.003s wall-clock]
+Normalizing task... [0.000s CPU, 0.000s wall-clock]
+Instantiating...
+Generating Datalog program... [0.000s CPU, 0.001s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.000s CPU, 0.003s wall-clock]
+Preparing model... [0.000s CPU, 0.002s wall-clock]
+Generated 48 rules.
+Computing model... [2.200s CPU, 2.190s wall-clock]
+266978 relevant atoms
+30201 auxiliary atoms
+297179 final queue length
+849068 total queue pushes
+Completing instantiation... [8.410s CPU, 8.405s wall-clock]
+Instantiating: [10.640s CPU, 10.650s wall-clock]
+Computing fact groups...
+Finding invariants...
+12 initial candidates
+Finding invariants: [0.160s CPU, 0.163s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
+Instantiating groups... [0.000s CPU, 0.001s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+69 uncovered facts
+Choosing groups: [0.000s CPU, 0.000s wall-clock]
+Building translation key... [0.000s CPU, 0.001s wall-clock]
+Computing fact groups: [0.160s CPU, 0.166s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.000s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Processing axioms: [0.300s CPU, 0.300s wall-clock]
+Translating task: [6.990s CPU, 6.990s wall-clock]
+130 effect conditions simplified
+0 implied preconditions added
+Detecting unreachable propositions...
+0 operators removed
+0 axioms removed
+6 propositions removed
+Detecting unreachable propositions: [4.440s CPU, 4.453s wall-clock]
+Reordering and filtering variables...
+31 of 75 variables necessary.
+0 of 6 mutex groups necessary.
+184148 of 184148 operators necessary.
+2 of 2 axiom rules necessary.
+Reordering and filtering variables: [0.690s CPU, 0.681s wall-clock]
+Translator variables: 31
+Translator derived variables: 2
+Translator facts: 302
+Translator goal facts: 2
+Translator mutex groups: 0
+Translator total mutex groups size: 0
+Translator operators: 184148
+Translator axioms: 2
+Translator task size: 1269307
+Translator peak memory: 1110272 KB
+Writing output... [1.040s CPU, 1.062s wall-clock]
+Done! [24.250s CPU, 24.275s wall-clock]
+INFO     Run task transformation (/planner/planners/ipc2018-opt-metis/builds/release64/bin/preprocess).
+INFO     callstring: /planner/planners/ipc2018-opt-metis/builds/release64/bin/preprocess < output.sas
+Building causal graph...
+The causal graph is not acyclic.
+31 variables of 31 necessary
+0 of 0 mutex groups necessary.
+184148 of 184148 operators necessary.
+2 of 2 axiom rules necessary.
+Disabling h2 analysis because it does not currently support axioms
+Building domain transition graphs...
+solveable in poly time 0
+Building successor generator...
+Preprocessor variables: 31
+Preprocessor facts: 302
+Preprocessor derived variables: 2
+Preprocessor operators: 184148
+Preprocessor mutex groups: 0
+Preprocessor task size: 1269307
+Writing output...
+done
+INFO     Running search (release64).
+INFO     search input: output.sas
+INFO     search arguments: ['--symmetries', 'sym=structural_symmetries(search_symmetries=dks)', '--search', 'astar(max([celmcut,lmcount(lm_factory=lm_merged([lm_rhw,lm_hm(m=1)]),admissible=true,transform=multiply_out_conditional_effects)]),symmetries=sym,pruning=stubborn_sets_simple(minimum_pruning_ratio=0.01),num_por_probes=1000)']
+INFO     search time limit: 826.51s
+INFO     search memory limit: None
+INFO     search executable: /planner/planners/ipc2018-opt-metis/builds/release64/bin/downward
+INFO     callstring: /planner/planners/ipc2018-opt-metis/builds/release64/bin/downward --symmetries 'sym=structural_symmetries(search_symmetries=dks)' --search 'astar(max([celmcut,lmcount(lm_factory=lm_merged([lm_rhw,lm_hm(m=1)]),admissible=true,transform=multiply_out_conditional_effects)]),symmetries=sym,pruning=stubborn_sets_simple(minimum_pruning_ratio=0.01),num_por_probes=1000)' --internal-plan-file /home/vidusha/intelligent_systems/planners/hapori-miplan/solutions/recharging_robot/p12_sol.txt < output.sas
+time limit 826.51 -> (827, 828)
+reading input... [t=0.000183015s]
+done reading input! [t=0.430569s]
+packing state variables...done! [t=0.430569s]
+Variables: 31
+FactPairs: 302
+Bytes per state: 8
+Building successor generator...done! [t=0.47411s]
+peak memory difference for root successor generator creation: 21740 KB
+time for root successor generation creation: 0.0435418s
+done initializing global data [t=0.47411s]
+This configuration does not support axioms!
+Terminating.
+Tried to use unsupported feature.
+Peak memory: 100268 KB
+Command '['/planner/planners/ipc2018-opt-metis/builds/release64/bin/downward', '--symmetries', 'sym=structural_symmetries(search_symmetries=dks)', '--search', 'astar(max([celmcut,lmcount(lm_factory=lm_merged([lm_rhw,lm_hm(m=1)]),admissible=true,transform=multiply_out_conditional_effects)]),symmetries=sym,pruning=stubborn_sets_simple(minimum_pruning_ratio=0.01),num_por_probes=1000)', '--internal-plan-file', '/home/vidusha/intelligent_systems/planners/hapori-miplan/solutions/recharging_robot/p12_sol.txt']' returned non-zero exit status 3
+Image nick: ipc2018-opt-metis
+Configs: ['metis2']
+Plan file: /home/vidusha/intelligent_systems/planners/hapori-miplan/solutions/recharging_robot/p12_sol.txt
+Run image config metis2
+Calling planner: ['python2', '/planner/planners/ipc2018-opt-metis/fast-downward.py', '--build=release64', '--plan-file', '/home/vidusha/intelligent_systems/planners/hapori-miplan/solutions/recharging_robot/p12_sol.txt', '--transform-task', '/planner/planners/ipc2018-opt-metis/builds/release64/bin/preprocess', '--overall-time-limit', '30m', '/home/vidusha/intelligent_systems/planners/hapori-miplan/domains/recharging_robot_domain.pddl', '/home/vidusha/intelligent_systems/planners/hapori-miplan/problems/recharging_robot/p12.pddl', '--symmetries', 'sym=structural_symmetries(search_symmetries=dks)', '--search', 'astar(max([celmcut,lmcount(lm_factory=lm_merged([lm_rhw,lm_hm(m=1)]),admissible=true,transform=multiply_out_conditional_effects)]),symmetries=sym,pruning=stubborn_sets_simple(minimum_pruning_ratio=0.01),num_por_probes=1000)']
+Found plan file(s): []
+exitcode: 99
+
+remaining time: 1713.02
+config 3: relative time 89, remaining time 163, absolute time 935
+args: ['/usr/bin/python3', '/planner/plan.py', 'ipc2018-decstar', 'domains/recharging_robot_domain.pddl', 'problems/recharging_robot/p12.pddl', 'solutions/recharging_robot/p12_sol.txt', '--config', 'opt-config06']
+INFO     search stdin: None
+INFO     search time limit: 935s
+INFO     search memory limit: None
+INFO     search command line string: /usr/bin/python3 /planner/plan.py ipc2018-decstar domains/recharging_robot_domain.pddl problems/recharging_robot/p12.pddl solutions/recharging_robot/p12_sol.txt --config opt-config06
+INFO     Running translator.
+INFO     translator inputs: ['/home/vidusha/intelligent_systems/planners/hapori-miplan/domains/recharging_robot_domain.pddl', '/home/vidusha/intelligent_systems/planners/hapori-miplan/problems/recharging_robot/p12.pddl']
+INFO     translator arguments: []
+Parsing...
+Parsing: [0.000s CPU, 0.001s wall-clock]
+Normalizing task... [0.000s CPU, 0.000s wall-clock]
+Instantiating...
+Generating Datalog program... [0.000s CPU, 0.001s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.010s CPU, 0.002s wall-clock]
+Preparing model... [0.000s CPU, 0.002s wall-clock]
+Generated 48 rules.
+Computing model... [2.430s CPU, 2.421s wall-clock]
+266978 relevant atoms
+30201 auxiliary atoms
+297179 final queue length
+849068 total queue pushes
+Completing instantiation... [12.000s CPU, 12.009s wall-clock]
+Instantiating: [14.500s CPU, 14.501s wall-clock]
+Computing fact groups...
+Finding invariants...
+12 initial candidates
+Finding invariants: [0.160s CPU, 0.160s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
+Instantiating groups... [0.000s CPU, 0.001s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+69 uncovered facts
+Choosing groups: [0.000s CPU, 0.000s wall-clock]
+Building translation key... [0.000s CPU, 0.000s wall-clock]
+Computing fact groups: [0.160s CPU, 0.162s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.000s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Processing axioms: [0.360s CPU, 0.353s wall-clock]
+Translating task: [5.640s CPU, 5.633s wall-clock]
+130 effect conditions simplified
+0 implied preconditions added
+Detecting unreachable propositions...
+0 operators removed
+6 propositions removed
+Detecting unreachable propositions: [0.720s CPU, 0.720s wall-clock]
+Translator variables: 75
+Translator derived variables: 2
+Translator facts: 390
+Translator goal facts: 2
+Translator mutex groups: 6
+Translator total mutex groups size: 252
+Translator operators: 184148
+Translator axioms: 2
+Translator task size: 1270565
+Translator peak memory: 1231680 KB
+Writing output... [1.050s CPU, 4.241s wall-clock]
+Done! [22.460s CPU, 25.782s wall-clock]
+INFO     Running preprocessor.
+INFO     preprocessor input: output.sas
+INFO     preprocessor arguments: ['--h2-time-limit', '120']
+Building causal graph...
+The causal graph is not acyclic.
+31 variables of 75 necessary
+0 of 6 mutex groups necessary.
+184148 of 184148 operators necessary.
+2 of 2 axiom rules necessary.
+Disabling h2 analysis because it does not currently support axioms
+Building domain transition graphs...
+solveable in poly time 0
+Building successor generator...
+Preprocessor variables: 31
+Preprocessor facts: 302
+Preprocessor derived variables: 2
+Preprocessor operators: 184148
+Preprocessor mutex groups: 0
+Preprocessor task size: 1269307
+Writing output...
+done
+INFO     Running search.
+INFO     search input: output
+INFO     search executable: /planner/planners/ipc2018-decstar/src/search/downward-release
+INFO     search arguments: ['--search', 'astar(blind)', '--internal-plan-file', '/home/vidusha/intelligent_systems/planners/hapori-miplan/solutions/recharging_robot/p12_sol.txt']
+reading input... [t=0s]
+Simplifying transitions... done!
+done reading input! [t=1.13s]
+building causal graph...done! [t=1.14s]
+Variables: 31
+Bytes per state: 8
+done! [t=1.14s]
+done initalizing global data [t=1.14s]
+Conducting best first search with reopening closed nodes, (real) bound = 2147483647
+Initializing blind search heuristic...
+f = 0 [1 evaluated, 0 expanded, t=1.15s, 207096 KB]
+Best heuristic value: 0 [g=0, 1 evaluated, 0 expanded, t=1.15s, 207096 KB]
+f = 1 [76 evaluated, 8 expanded, t=1.15s, 207096 KB]
+f = 2 [900 evaluated, 144 expanded, t=1.15s, 207096 KB]
+f = 3 [5878 evaluated, 1272 expanded, t=1.15s, 207096 KB]
+f = 4 [26938 evaluated, 7384 expanded, t=1.16s, 207096 KB]
+f = 5 [95246 evaluated, 31760 expanded, t=1.22s, 207864 KB]
+f = 6 [274093 evaluated, 108232 expanded, t=1.41s, 212472 KB]
+f = 7 [663774 evaluated, 304120 expanded, t=1.94s, 241892 KB]
+f = 8 [1392747 evaluated, 724880 expanded, t=3.08s, 302252 KB]
+f = 9 [2600952 evaluated, 1503016 expanded, t=5.24s, 403436 KB]
+f = 10 [4436468 evaluated, 2782544 expanded, t=9.15s, 562340 KB]
+f = 11 [7084411 evaluated, 4713032 expanded, t=15.27s, 804088 KB]
+f = 12 [10802955 evaluated, 7486120 expanded, t=24.3s, 1074224 KB]
+f = 13 [16021323 evaluated, 11375424 expanded, t=37.97s, 1550708 KB]
+Solution found!
+Actual search time: 58.56s [t=59.71s]
+move robot-02 location-0013 location-0002 battery-0014 battery-0013 (1)
+move robot-02 location-0002 location-0019 battery-0013 battery-0012 (1)
+stop-and-guard robot-02 location-0019 (0)
+move robot-00 location-0039 location-0001 battery-0004 battery-0003 (1)
+move robot-00 location-0001 location-0006 battery-0003 battery-0002 (1)
+move robot-00 location-0006 location-0032 battery-0002 battery-0001 (1)
+move robot-00 location-0032 location-0031 battery-0001 battery-0000 (1)
+stop-and-guard robot-00 location-0031 (0)
+verify-guard-config config-01 (0)
+move robot-01 location-0022 location-0009 battery-0003 battery-0002 (1)
+move robot-01 location-0009 location-0050 battery-0002 battery-0001 (1)
+move robot-01 location-0050 location-0011 battery-0001 battery-0000 (1)
+stop-and-guard robot-01 location-0011 (0)
+move robot-02 location-0019 location-0000 battery-0012 battery-0011 (1)
+move robot-02 location-0000 location-0024 battery-0011 battery-0010 (1)
+move robot-02 location-0024 location-0008 battery-0010 battery-0009 (1)
+move robot-02 location-0008 location-0048 battery-0009 battery-0008 (1)
+stop-and-guard robot-02 location-0048 (0)
+verify-guard-config config-00 (0)
+Plan length: 19 step(s).
+Plan cost: 13
+Initial state h value: 0.
+Expanded 16841473 state(s).
+Reopened 0 state(s).
+Evaluated 23384804 state(s).
+Evaluations: 23384804
+Generated 129304546 state(s).
+Dead ends: 0 state(s).
+Expanded until last jump: 11375424 state(s).
+Reopened until last jump: 0 state(s).
+Evaluated until last jump: 16021323 state(s).
+Generated until last jump: 87078602 state(s).
+Number of registered states: 23384804
+Search time: 58.56s
+Total time: 59.71s
+Solution found.
+Peak memory: 2085760 KB
+Image nick: ipc2018-decstar
+Configs: ['opt-config06']
+Plan file: /home/vidusha/intelligent_systems/planners/hapori-miplan/solutions/recharging_robot/p12_sol.txt
+Run image config opt-config06
+Calling planner: ['python2', '/planner/planners/ipc2018-decstar/src/fast-downward.py', '--plan-file', '/home/vidusha/intelligent_systems/planners/hapori-miplan/solutions/recharging_robot/p12_sol.txt', '/home/vidusha/intelligent_systems/planners/hapori-miplan/domains/recharging_robot_domain.pddl', '/home/vidusha/intelligent_systems/planners/hapori-miplan/problems/recharging_robot/p12.pddl', '--preprocess-options', '--h2-time-limit', '120', '--search-options', '--search', 'astar(blind)']
+Found plan file(s): ['/home/vidusha/intelligent_systems/planners/hapori-miplan/solutions/recharging_robot/p12_sol.txt']
+exitcode: 0
+
+Exit codes: [99, 99, 99, 0]
+INFO     Planner time: 175.02s
